@@ -24,37 +24,37 @@ if(getCookie('theme')==null){
 console.log(getCookie('theme'))
 if(getCookie('theme')=='1'){
     theme = 'black'
-    document.getElementById('themechangebtimg').src = '../Images/sun.png';
+    document.getElementById('themechangebtimg').src = 'Images/sun.png';
 
-    document.getElementById('bottominstaimg').src = '../Images/instaw.png';
-    document.getElementById('bottomgitimg').src = '../Images/gitw.png';
+    document.getElementById('bottominstaimg').src = 'Images/instaw.png';
+    document.getElementById('bottomgitimg').src = 'Images/gitw.png';
     revtheme = 'white'
 }
 else{
     theme = 'white'
-    document.getElementById('themechangebtimg').src = '../Images/moon.png'; 
+    document.getElementById('themechangebtimg').src = 'Images/moon.png'; 
  
-    document.getElementById('bottominstaimg').src = '../Images/instab.png';
-    document.getElementById('bottomgitimg').src = '../Images/gitb.png';
+    document.getElementById('bottominstaimg').src = 'Images/instab.png';
+    document.getElementById('bottomgitimg').src = 'Images/gitb.png';
     revtheme = 'black'
 }
 changetheme()
 function changetheme(){
     if(theme == 'black'){
         theme = 'white'
-        document.getElementById('themechangebtimg').src = '../Images/moon.png'; 
+        document.getElementById('themechangebtimg').src = 'Images/moon.png'; 
        
-        document.getElementById('bottominstaimg').src = '../Images/instaw.png';
-        document.getElementById('bottomgitimg').src = '../Images/gitw.png';
+        document.getElementById('bottominstaimg').src = 'Images/instaw.png';
+        document.getElementById('bottomgitimg').src = 'Images/gitw.png';
         revtheme = 'black'
         setCookie('theme','1',365)
     }
     else{
         theme = 'black'
-        document.getElementById('themechangebtimg').src = '../Images/sun.png';
+        document.getElementById('themechangebtimg').src = 'Images/sun.png';
         
-        document.getElementById('bottominstaimg').src = '../Images/instab.png';
-        document.getElementById('bottomgitimg').src = '../Images/gitb.png';
+        document.getElementById('bottominstaimg').src = 'Images/instab.png';
+        document.getElementById('bottomgitimg').src = 'Images/gitb.png';
         revtheme = 'white'
         setCookie('theme','0',365)
     }
