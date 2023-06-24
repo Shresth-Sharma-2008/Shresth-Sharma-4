@@ -1,0 +1,152 @@
+@font-face {
+    font-family: presidium;
+    src: url(../fonts/presidium.ttf);
+}
+#nav{
+    position:fixed;
+    left:0px;
+    margin:0;
+    top:0px;
+    min-width:100vw;
+    max-height:20vh;
+    padding-top:0px;
+    border-style:solid;
+    border-width:0.1vw;
+    z-index:10;
+}
+#name{
+    display:inline-block;
+    font-size:2vw;
+    font-family: presidium;
+    color:blueviolet;
+    position:static;
+    padding-top:2vw;
+    padding-bottom:1vw;
+    padding-left:2vw;
+    padding-right:2vw;
+    margin:0;
+}
+.navbt{
+    position:static;
+    display:inline-block;
+    border-style:none;
+    padding-top:1vw;
+    padding-bottom:1vw;
+    padding-left:2vw;
+    padding-right:2vw;
+    margin-top:1vw;
+    margin-bottom:1vw;
+    font-size:1vw;
+    background-color:blueviolet;
+    border-radius:20%;
+}
+#signinbt{
+    float:right;
+    margin-right:2vw;
+}
+#signinbt:hover{
+    background-color: rgb(96, 13, 172);
+}
+#themechangebt{
+    float:right;
+    background:none;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-right:0px;
+    margin-left:0px;
+}
+#themechangebtimg{
+    width:4vw;
+}
+.navbt1{
+    font-size:1.6vw;
+    position:static;
+    display:inline-block;
+    background:none;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+    margin-right:0px;
+    padding-top:2vw;
+    padding-bottom:1vw;
+    padding-left:1vw;
+    padding-right:1vw;
+    border-style:none;
+}
+#mygear{
+    float:right;
+    transition: transform 0.4s ease;
+}
+#mygear:hover{
+    transform: translateY(-5px);
+    text-decoration-line: underline;
+    text-decoration-color: blueviolet;
+    text-decoration-thickness: 0.5vh;
+}
+#about{
+    float:right;
+    transition: transform 0.4s ease;
+}
+#about:hover{
+    transform: translateY(-5px);
+    text-decoration-line: underline;
+    text-decoration-color: blueviolet;
+    text-decoration-thickness: 0.5vh;
+}
+#feedback{
+    float:right;
+    transition: transform 0.4s ease;
+}
+#feedback:hover{
+    transform: translateY(-5px);
+    text-decoration-line: underline;
+    text-decoration-color: blueviolet;
+    text-decoration-thickness: 0.5vh;
+}
+#home{
+    float:right;
+    transition: transform 0.4s ease;
+}
+#home:hover{
+    transform: translateY(-5px);
+    text-decoration-line: underline;
+    text-decoration-color: blueviolet;
+    text-decoration-thickness: 0.5vh;
+}
+#contact{
+    float:right;
+    transition: transform 0.4s ease;
+}
+#contact:hover{
+    transform: translateY(-5px);
+    text-decoration-line: underline;
+    text-decoration-color: blueviolet;
+    text-decoration-thickness: 0.5vh;
+}
+
+#between{
+    position:absolute;
+    top:15vw;
+    left:5vw;
+    font-size:2vw;
+}
+#between2{
+    margin-top:0px;
+    margin-bottom:0px;
+}
+#between1{
+    color:blueviolet;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+#between3{
+    margin-top:0px;
+    margin-bottom:0px;
+    color:blueviolet;
+}
+#mainphoto{
+    position:absolute;
+    top:10vw;
+    right:3vw;
+    width:40vw;
+}
