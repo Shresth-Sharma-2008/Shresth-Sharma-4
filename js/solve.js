@@ -201,3 +201,19 @@ function text(){
     }
 }
 setInterval(text, 25)
+function bmisolve(){
+    // document.getElementById('bmires').innerHTML = 'BMI : ' + document.getElementById('weight').value/(document.getElementById('height').value*document.getElementById('height').value)
+    bbmi = document.getElementById('weight').value;
+    cbmi = document.getElementById('height').value;
+    ebmi = bbmi/(cbmi*cbmi)
+    if(ebmi<15.2){
+        dbmi = 'Under Weight'
+    }
+    else if(ebmi > 18.5 && ebmi < 24.9){
+        dbmi = 'Normal'
+    }
+    else{
+        dbmi = 'Over Weight'
+    }
+    document.getElementById('bmires').innerHTML = 'BMI : ' +ebmi.toString().slice(0,5)+' ('+dbmi+')'
+}

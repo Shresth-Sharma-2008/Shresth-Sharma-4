@@ -31,10 +31,10 @@
         <p id="bmi">BMI Calculator</p>
         <p id="bmides">Enter your weight and height and calculate the bmi very accurately, Enter the height in meters and weight in kg</p>
         <a><img id="bmiimg" src="../Images/bmi.png"></a>
-        <input type="text" id="weight" class="inp" placeholder="Weight">
-        <input type="text" id="height" class="inp" placeholder="Height">
+        <input type="text" id="weight" class="inp" placeholder="Weight(kg)">
+        <input type="text" id="height" class="inp" placeholder="Height(meter)">
         <p id="bmires">BMI : -</p>
-        <button id="bmibt" class="bt" onclick="document.getElementById('bmires').innerHTML = 'BMI : ' + document.getElementById('weight').value/(document.getElementById('height').value*document.getElementById('height').value)">Solve!</button>
+        <button id="bmibt" class="bt" onclick="bmisolve()">Solve!</button>
         <span>
             <div id="bottom">
                 <img id="bottomimg" src="../Images/logo.png">

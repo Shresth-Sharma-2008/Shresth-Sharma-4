@@ -92,6 +92,17 @@
     top:120vw;
     left:67.5vw;
 }
+#v10{
+    position:absolute;
+    top:165.75vw;
+    width:30vw;
+    left:2.75vw;
+    /* transform: rotate(270deg); */
+}
+#a10{
+    top:160vw;
+    left:2.5vw;
+}
 #w1{
     top:72vw;
     left:12vw;
@@ -128,6 +139,10 @@
     top:152vw;
     left:75vw;
 }
+#w10{
+    top:192vw;
+    left:12vw;
+}
 .bt{
     position:absolute;
     border-style:none;
@@ -149,7 +164,7 @@
 }
 #bottom{
     position: absolute;
-    top:330vh;
+    top:400vh;
     padding-bottom:4vw;
     padding-top:1vw;
     /* background-color: blue; */
