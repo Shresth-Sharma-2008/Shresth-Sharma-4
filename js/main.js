@@ -24,37 +24,37 @@ if(getCookie('theme')==null){
 console.log(getCookie('theme'))
 if(getCookie('theme')=='1'){
     theme = 'black'
-    document.getElementById('themechangebtimg').src = 'Images/sun.png';
+    document.getElementById('themechangebtimg').src = '../Images/sun.png';
 
-    document.getElementById('bottominstaimg').src = 'Images/instaw.png';
-    document.getElementById('bottomgitimg').src = 'Images/gitw.png';
+    document.getElementById('bottominstaimg').src = '../Images/instaw.png';
+    document.getElementById('bottomgitimg').src = '../Images/gitw.png';
     revtheme = 'white'
 }
 else{
     theme = 'white'
-    document.getElementById('themechangebtimg').src = 'Images/moon.png'; 
+    document.getElementById('themechangebtimg').src = '../Images/moon.png'; 
  
-    document.getElementById('bottominstaimg').src = 'Images/instab.png';
-    document.getElementById('bottomgitimg').src = 'Images/gitb.png';
+    document.getElementById('bottominstaimg').src = '../Images/instab.png';
+    document.getElementById('bottomgitimg').src = '../Images/gitb.png';
     revtheme = 'black'
 }
 changetheme()
 function changetheme(){
     if(theme == 'black'){
         theme = 'white'
-        document.getElementById('themechangebtimg').src = 'Images/moon.png'; 
+        document.getElementById('themechangebtimg').src = '../Images/moon.png'; 
        
-        document.getElementById('bottominstaimg').src = 'Images/instaw.png';
-        document.getElementById('bottomgitimg').src = 'Images/gitw.png';
+        document.getElementById('bottominstaimg').src = '../Images/instaw.png';
+        document.getElementById('bottomgitimg').src = '../Images/gitw.png';
         revtheme = 'black'
         setCookie('theme','1',365)
     }
     else{
         theme = 'black'
-        document.getElementById('themechangebtimg').src = 'Images/sun.png';
+        document.getElementById('themechangebtimg').src = '../Images/sun.png';
         
-        document.getElementById('bottominstaimg').src = 'Images/instab.png';
-        document.getElementById('bottomgitimg').src = 'Images/gitb.png';
+        document.getElementById('bottominstaimg').src = '../Images/instab.png';
+        document.getElementById('bottomgitimg').src = '../Images/gitb.png';
         revtheme = 'white'
         setCookie('theme','0',365)
     }
@@ -73,10 +73,10 @@ function changetheme(){
     document.getElementById('equdes').style.color= revtheme;
     document.getElementById('editdes').style.color= revtheme;
     document.getElementById('bottomname2').style.color= revtheme;
-    document.getElementById('gamesonbt').style.color= revtheme;
-    document.getElementById('gamesdwbt').style.color= revtheme;
-    document.getElementById('solvebt').style.color= revtheme;
-    document.getElementById('watchbt').style.color= revtheme;
+    document.getElementById('gamesonbt').style.color= 'black';
+    document.getElementById('gamesdwbt').style.color= 'black';
+    document.getElementById('solvebt').style.color= 'black';
+    document.getElementById('watchbt').style.color= 'black';
 
     if(theme == 'white'){
         document.getElementById('bottom').style.backgroundColor = 'rgb(228,228,228)';

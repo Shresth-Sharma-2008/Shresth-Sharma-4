@@ -24,36 +24,36 @@ if(getCookie('theme')==null){
 console.log(getCookie('theme'))
 if(getCookie('theme')=='1'){
     theme = 'black'
-    document.getElementById('themeimg').src = 'Images/sun.png';
-    document.getElementById('bottominstaimg').src = 'Images/instaw.png';
-    document.getElementById('bottomgitimg').src = 'Images/gitw.png';
+    document.getElementById('themeimg').src = '../Images/sun.png';
+    document.getElementById('bottominstaimg').src = '../Images/instaw.png';
+    document.getElementById('bottomgitimg').src = '../Images/gitw.png';
     revtheme = 'white'
 }
 else{
     theme = 'white'
-    document.getElementById('themeimg').src = 'Images/moon.png'; 
+    document.getElementById('themeimg').src = '../Images/moon.png'; 
  
-    document.getElementById('bottominstaimg').src = 'Images/instab.png';
-    document.getElementById('bottomgitimg').src = 'Images/gitb.png';
+    document.getElementById('bottominstaimg').src = '../Images/instab.png';
+    document.getElementById('bottomgitimg').src = '../Images/gitb.png';
     revtheme = 'black'
 }
 changetheme()
 function changetheme(){
     if(theme == 'black'){
         theme = 'white'
-        document.getElementById('themeimg').src = 'Images/moon.png'; 
+        document.getElementById('themeimg').src = '../Images/moon.png'; 
        
-        document.getElementById('bottominstaimg').src = 'Images/instaw.png';
-        document.getElementById('bottomgitimg').src = 'Images/gitw.png';
+        document.getElementById('bottominstaimg').src = '../Images/instaw.png';
+        document.getElementById('bottomgitimg').src = '../Images/gitw.png';
         revtheme = 'black'
         setCookie('theme','1',365)
     }
     else{
         theme = 'black'
-        document.getElementById('themeimg').src = 'Images/sun.png';
+        document.getElementById('themeimg').src = '../Images/sun.png';
         
-        document.getElementById('bottominstaimg').src = 'Images/instab.png';
-        document.getElementById('bottomgitimg').src = 'Images/gitb.png';
+        document.getElementById('bottominstaimg').src = '../Images/instab.png';
+        document.getElementById('bottomgitimg').src = '../Images/gitb.png';
         revtheme = 'white'
         setCookie('theme','0',365)
     }
@@ -70,11 +70,11 @@ function changetheme(){
     document.getElementById('about').style.color=revtheme;
     document.getElementById('name1').style.color= revtheme;
     document.getElementById('gamesdes').style.color= revtheme;
-    document.getElementById('gamesonline').style.color= revtheme;
-    document.getElementById('gamesdownload').style.color= revtheme;
+    document.getElementById('gamesonline').style.color= 'black';
+    document.getElementById('gamesdownload').style.color= 'black';
     document.getElementById('equdes').style.color= revtheme;
-    document.getElementById('equbutton').style.color= revtheme;
-    document.getElementById('editbt').style.color= revtheme;
+    document.getElementById('equbutton').style.color= 'black';
+    document.getElementById('editbt').style.color= 'black';
     document.getElementById('editdes').style.color= revtheme;
     if(theme == 'white'){
         document.getElementById('bottom').style.backgroundColor = 'rgb(228,228,228)';
