@@ -70,11 +70,11 @@ function changetheme(){
     document.getElementById('about').style.color=revtheme;
     document.getElementById('name1').style.color= revtheme;
     document.getElementById('gamesdes').style.color= revtheme;
-    document.getElementById('gamesonline').style.color= 'black';
-    document.getElementById('gamesdownload').style.color= 'black';
+    document.getElementById('gamesonline').style.color= revtheme;
+    document.getElementById('gamesdownload').style.color= revtheme;
     document.getElementById('equdes').style.color= revtheme;
-    document.getElementById('equbutton').style.color= 'black';
-    document.getElementById('editbt').style.color= 'black';
+    document.getElementById('equbutton').style.color= revtheme;
+    document.getElementById('editbt').style.color= revtheme;
     document.getElementById('editdes').style.color= revtheme;
     if(theme == 'white'){
         document.getElementById('bottom').style.backgroundColor = 'rgb(228,228,228)';

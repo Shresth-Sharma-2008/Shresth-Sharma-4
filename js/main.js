@@ -73,10 +73,10 @@ function changetheme(){
     document.getElementById('equdes').style.color= revtheme;
     document.getElementById('editdes').style.color= revtheme;
     document.getElementById('bottomname2').style.color= revtheme;
-    document.getElementById('gamesonbt').style.color= 'black';
-    document.getElementById('gamesdwbt').style.color= 'black';
-    document.getElementById('solvebt').style.color= 'black';
-    document.getElementById('watchbt').style.color= 'black';
+    document.getElementById('gamesonbt').style.color= revtheme;
+    document.getElementById('gamesdwbt').style.color= revtheme;
+    document.getElementById('solvebt').style.color= revtheme;
+    document.getElementById('watchbt').style.color= revtheme;
 
     if(theme == 'white'){
         document.getElementById('bottom').style.backgroundColor = 'rgb(228,228,228)';
