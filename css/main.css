@@ -22,8 +22,7 @@
 #gamesonbt{
     position:absolute;
     border-style:none;
-    /* background-color:blueviolet; */
-    background: linear-gradient(180deg, rgb(244, 196, 48) 0%, white 50%, rgb(19, 136, 8) 100%);
+    background-color:blueviolet;
     top:55vw;
     right:35vw;
     width:10vw;
@@ -34,7 +33,7 @@
 #gamesdwbt{
     position:absolute;
     border-style:none;
-    background: linear-gradient(180deg, rgb(244, 196, 48) 0%, white 50%, rgb(19, 136, 8) 100%);
+    background-color:blueviolet;
     top:55vw;
     right:24vw;
     width:10vw;
@@ -72,7 +71,7 @@
 }
 #solvebt{
     position:absolute;
-    background: linear-gradient(180deg, rgb(244, 196, 48) 0%, white 50%, rgb(19, 136, 8) 100%);
+    background-color: blueviolet;
     border-style: none;
     top:85vw;
     left:5vw;
@@ -107,7 +106,7 @@
 }
 #watchbt{
     position:absolute;
-    background: linear-gradient(180deg, rgb(244, 196, 48) 0%, white 50%, rgb(19, 136, 8) 100%);
+    background-color: blueviolet;
     border-style: none;
     top:118vw;
     right:35vw;

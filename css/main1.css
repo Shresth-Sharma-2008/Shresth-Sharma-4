@@ -78,7 +78,7 @@
 }
 .bt{
     position: absolute;
-    background: linear-gradient(180deg, rgb(244, 196, 48) 0%, white 50%, rgb(19, 136, 8) 100%);
+    background-color:blueviolet;
     border-style:none;
     font-size:3vw;
     min-height:2vh;
