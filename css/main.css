@@ -1,9 +1,19 @@
+@keyframes gayab{
+    0%{transform:scale(0);
+}
+    90%{transform:scale(0);
+}
+    100%{transform:scale(1);
+}
+
+}
 #games{
     font-size:3.5vw;
     position:absolute;
     color:blueviolet;
     top:35vw;
     right:30vw;
+    animation: gayab 4.5s linear;
 }
 #gamesdes{
     font-size:1.5vw;
@@ -12,12 +22,14 @@
     top:42vw;
     right:5vw;
     max-width:40vw;
+    animation: gayab 4.5s linear;
 }
 #gamesphoto{
     position:absolute;
     top:38vw;
     left:4vw;
     width:45vw;
+    animation: gayab 4.5s linear;
 }
 #gamesonbt{
     position:absolute;
@@ -29,6 +41,7 @@
     height:5vw;
     transition: transform 0.4s ease;
 
+    animation: gayab 4.5s linear;
 }
 #gamesdwbt{
     position:absolute;
@@ -39,6 +52,7 @@
     width:10vw;
     height:5vw;
     transition: transform 0.4s ease;
+    animation: gayab 4.5s linear;
 }
 #gamesonbt:hover{
     background-color: rgb(96, 13, 172);
@@ -54,6 +68,7 @@
     color:blueviolet;
     top:68vw;
     left:5vw;
+    animation: gayab 4.5s linear;
 }
 #equdes{
     font-size:1.5vw;
@@ -62,12 +77,14 @@
     top:75vw;
     left:5vw;
     max-width:40vw;
+    animation: gayab 4.5s linear;
 }
 #equphoto{
     position:absolute;
     top:71vw;
     right:4vw;
     width:45vw;
+    animation: gayab 4.5s linear;
 }
 #solvebt{
     position:absolute;
@@ -78,6 +95,7 @@
     width:10vw;
     height:5vw;
     transition: transform 0.4s ease;
+    animation: gayab 4.5s linear;
 }
 #solvebt:hover{
     transform: translateY(-5px);
@@ -89,6 +107,7 @@
     color:blueviolet;
     top:101vw;
     right:30vw;
+    animation: gayab 4.5s linear;
 }
 #editdes{
     font-size:1.5vw;
@@ -97,12 +116,14 @@
     top:108vw;
     right:5vw;
     max-width:40vw;
+    animation: gayab 4.5s linear;
 }
 #editphoto{
     position:absolute;
     top:104vw;
     left:4vw;
     width:45vw;
+    animation: gayab 4.5s linear;
 }
 #watchbt{
     position:absolute;
@@ -113,6 +134,7 @@
     width:10vw;
     height:5vw;
     transition: transform 0.4s ease;
+    animation: gayab 4.5s linear;
 }
 
 #watchbt:hover{
@@ -128,6 +150,7 @@
     min-width:99vw;
     margin-left:-1vw;
     margin-right:0px;
+    animation: gayab 4.5s linear;
 }
 #bottomimg{
     position: absolute;
@@ -136,6 +159,7 @@
     left:15vw;
     margin-left:0px;
     margin-right:0px;
+    animation: gayab 4.5s linear;
 }
 #bottomname{
     position: absolute;
@@ -145,6 +169,7 @@
     margin-top:0.5vw;
     margin-left:1vw;
     left:18vw;
+    animation: gayab 4.5s linear;
 }
 #bottomname2{
     position: absolute;
@@ -152,6 +177,7 @@
     font-size:3vw;
     margin-top:-0.5vw;
     left:36vw;
+    animation: gayab 4.5s linear;
 }
 #bottomname3{
     position: absolute;
@@ -160,16 +186,19 @@
     font-size:1vw;
     margin-top:1vw;
     left:39vw;
+    animation: gayab 4.5s linear;
 }
 #bottominstaimg{
     display:inline-block;
     position: absolute;
     left:70vw;
     width:3vw;
+    animation: gayab 4.5s linear;
 }
 #bottomgitimg{
     display:inline-block;
     position: absolute;
     left:75vw;
     width:3vw;
+    animation: gayab 4.5s linear;
 }
