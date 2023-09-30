@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDCJ8aDj1aNAabamLYsFbMlUArYmzdvGWo",
+            authDomain: "shresth-sharma-v3.firebaseapp.com",
+            databaseURL: "https://shresth-sharma-v3-default-rtdb.firebaseio.com",
+            projectId: "shresth-sharma-v3",
+            storageBucket: "shresth-sharma-v3.appspot.com",
+            messagingSenderId: "52938966152",
+            appId: "1:52938966152:web:7f3b056755e84853fe0b3d"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
     <title>Shresth._.Sharma</title>
 </head>
 <body>
@@ -9,21 +23,62 @@
     <h1>Mobile : </h1><a href="mobile.html">Mobile</a><br>
     <h1>Pc : </h1><a href="pc.html">Pc</a><br>
     <script>
-        console.log(navigator.userAgent)
-        var a = navigator.userAgent 
-        if (a.includes('Android') || a.includes('webOS') || a.includes('iPhone') || a.includes('iPad') || a.includes('iPod') || a.includes('BlackBerry') || a.includes('Windows Phone')){
-            b = true 
-        }
-        else{
-            b=false
-        }
+        var a = String(navigator.userAgent).toString()
+        database = firebase.database()
+        account = 'a'
+        c = String(navigator.userAgent)
+        let b = c.replace(/[/().;: ]/g, "");
         console.log(b)
-        document.getElementsByTagName('h1')[0].innerHTML = a
-        if(b){
-            window.open('mobile.html', '_top')
+        view = 0
+        var gameStateRef  = database.ref('V4/'+b+'/');
+            gameStateRef.on("value",function(data){
+            account = data.val();
+        });
+        var gameStateRef  = database.ref('V4/view');
+            gameStateRef.on("value",function(data){
+            view = data.val();
+        });
+        
+        check1 = true
+        setInterval(check, 500)
+        function check(){
+            if(account == 'a'){}
+            else if(check1){
+                check1 = false
+                if(account == null){
+                    console.log(a)
+                    database.ref('V4/'+b+'/').update({
+                        a:true
+                    });
+                    view += 1
+                    database.ref('V4').update({
+                        view:view
+                    });
+                    console.log('updated')
+                    console.log(account)
+                    redirect()
+                }
+                else{
+                    console.log(account)
+                    redirect()
+                }
+            }
         }
-        else{
-            window.open('pc.html', '_top')
+        function redirect(){
+            if (a.includes('Android') || a.includes('webOS') || a.includes('iPhone') || a.includes('iPad') || a.includes('iPod') || a.includes('BlackBerry') || a.includes('Windows Phone')){
+                b = true 
+            }
+            else{
+                b=false
+            }
+            console.log(b)
+            document.getElementsByTagName('h1')[0].innerHTML = a
+            if(b){
+                window.open('mobile.html', '_top')
+            }
+            else{
+                window.open('pc.html', '_top')
+            }
         }
     </script>
 </body>
