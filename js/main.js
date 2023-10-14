@@ -37,25 +37,25 @@ color = getCookie('color')
 if(getCookie('theme')=='1'){
     theme = 'black'
     if(color == 0){
-        document.getElementById('themechangebtimg').src = '../Images/sun.png';
+        document.getElementById('themechangebtimg').src = 'Images/sun.png';
     }
     else if(color == 1){
-        document.getElementById('themechangebtimg').src = '../Images/sun1.png';
+        document.getElementById('themechangebtimg').src = 'Images/sun1.png';
     }
     else{
-        document.getElementById('themechangebtimg').src = '../Images/sun2.png';
+        document.getElementById('themechangebtimg').src = 'Images/sun2.png';
     }
 
-    document.getElementById('bottominstaimg').src = '../Images/instaw.png';
-    document.getElementById('bottomgitimg').src = '../Images/gitw.png';
+    document.getElementById('bottominstaimg').src = 'Images/instaw.png';
+    document.getElementById('bottomgitimg').src = 'Images/gitw.png';
     revtheme = 'white'
 }
 else{
     theme = 'white'
-    document.getElementById('themechangebtimg').src = '../Images/moon.png'; 
+    document.getElementById('themechangebtimg').src = 'Images/moon.png'; 
     
-    document.getElementById('bottominstaimg').src = '../Images/instab.png';
-    document.getElementById('bottomgitimg').src = '../Images/gitb.png';
+    document.getElementById('bottominstaimg').src = 'Images/instab.png';
+    document.getElementById('bottomgitimg').src = 'Images/gitb.png';
     revtheme = 'black'
 }
 function setcolor(){
@@ -80,7 +80,7 @@ function setcolor(){
         document.getElementById('solvebt').style.backgroundColor = color;
         document.getElementById('watchbt').style.backgroundColor = color;
         if(theme == 'black'){
-            document.getElementById('themechangebtimg').src='../Images/sun.png'
+            document.getElementById('themechangebtimg').src='Images/sun.png'
         }
     }
     else if(getCookie('color') == 1){
@@ -103,7 +103,7 @@ function setcolor(){
         document.getElementById('solvebt').style.backgroundColor = color;
         document.getElementById('watchbt').style.backgroundColor = color;
         if(theme == 'black'){
-            document.getElementById('themechangebtimg').src='../Images/sun1.png'
+            document.getElementById('themechangebtimg').src='Images/sun1.png'
         }
     }
     else{
@@ -126,9 +126,25 @@ function setcolor(){
         document.getElementById('solvebt').style.backgroundColor = color;
         document.getElementById('watchbt').style.backgroundColor = color;
         if(theme == 'black'){
-            document.getElementById('themechangebtimg').src='../Images/sun2.png'
+            document.getElementById('themechangebtimg').src='Images/sun2.png'
         }
     }
+}
+if(getCookie('theme')=='1'){
+    theme = 'black'
+    if(color == 0){
+        document.getElementById('themechangebtimg').src = 'Images/sun.png';
+    }
+    else if(color == 1){
+        document.getElementById('themechangebtimg').src = 'Images/sun1.png';
+    }
+    else{
+        document.getElementById('themechangebtimg').src = 'Images/sun2.png';
+    }
+
+    document.getElementById('bottominstaimg').src = 'Images/instaw.png';
+    document.getElementById('bottomgitimg').src = 'Images/gitw.png';
+    revtheme = 'white'
 }
 console.log(getCookie('theme'))
 // changecolor()
@@ -138,27 +154,27 @@ changetheme()
 function changetheme(){
     if(theme == 'black'){
         theme = 'white'
-        document.getElementById('themechangebtimg').src = '../Images/moon.png'; 
+        document.getElementById('themechangebtimg').src = 'Images/moon.png'; 
        
-        document.getElementById('bottominstaimg').src = '../Images/instaw.png';
-        document.getElementById('bottomgitimg').src = '../Images/gitw.png';
+        document.getElementById('bottominstaimg').src = 'Images/instaw.png';
+        document.getElementById('bottomgitimg').src = 'Images/gitw.png';
         revtheme = 'black'
         setCookie('theme','1',365)
     }
     else{
         theme = 'black'
         if(color == 0){
-            document.getElementById('themechangebtimg').src = '../Images/sun.png';
+            document.getElementById('themechangebtimg').src = 'Images/sun.png';
         }
         else if(color == 1){
-            document.getElementById('themechangebtimg').src = '../Images/sun1.png';
+            document.getElementById('themechangebtimg').src = 'Images/sun1.png';
         }
         else{
-            document.getElementById('themechangebtimg').src = '../Images/sun2.png';
+            document.getElementById('themechangebtimg').src = 'Images/sun2.png';
         }
         
-        document.getElementById('bottominstaimg').src = '../Images/instab.png';
-        document.getElementById('bottomgitimg').src = '../Images/gitb.png';
+        document.getElementById('bottominstaimg').src = 'Images/instab.png';
+        document.getElementById('bottomgitimg').src = 'Images/gitb.png';
         revtheme = 'white'
         setCookie('theme','0',365)
     }

@@ -133,6 +133,22 @@ function setcolor(){
         }
     }
 }
+if(getCookie('theme')=='1'){
+    theme = 'black'
+    if(color == 0){
+        document.getElementById('themechangebtimg').src = '../Images/sun.png';
+    }
+    else if(color == 1){
+        document.getElementById('themechangebtimg').src = '../Images/sun1.png';
+    }
+    else{
+        document.getElementById('themechangebtimg').src = '../Images/sun2.png';
+    }
+
+    document.getElementById('bottominstaimg').src = '../Images/instaw.png';
+    document.getElementById('bottomgitimg').src = '../Images/gitw.png';
+    revtheme = 'white'
+}
 console.log(getCookie('theme'))
 // changecolor()
 setcolor();
