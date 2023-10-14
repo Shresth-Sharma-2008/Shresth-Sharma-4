@@ -109,6 +109,7 @@ function setcolor(){
         }
     }
 }
+setcolor();
 if(getCookie('theme')=='1'){
     theme = 'black'
     if(color == 0){
@@ -127,7 +128,6 @@ if(getCookie('theme')=='1'){
 }
 console.log(getCookie('theme'))
 // changecolor()
-setcolor();
 
 changetheme()
 function changetheme(){
