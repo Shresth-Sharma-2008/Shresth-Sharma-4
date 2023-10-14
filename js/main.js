@@ -1,3 +1,8 @@
+function getRandomInt(min, max) {
+    min = Math.ceil(min); // Round up to ensure it's inclusive
+    max = Math.floor(max); // Round down to ensure it's inclusive
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 function setCookie(name,value,days) {
     var expires = "";
     if (days) {
@@ -18,43 +23,142 @@ function getCookie(name) {
     }
     return null;
 }
+function changecolor(){
+    setCookie('color', getRandomInt(0,2), 7)
+    setcolor();
+}
+if(getCookie('color') == null){
+    setCookie('color', getRandomInt(0,2), 7)
+}
 if(getCookie('theme')==null){
     setCookie('theme', '0', 365)
 }
-console.log(getCookie('theme'))
+color = getCookie('color')
 if(getCookie('theme')=='1'){
     theme = 'black'
-    document.getElementById('themechangebtimg').src = '../Shresth-Sharma-4/Images/sun.png';
+    if(color == 0){
+        document.getElementById('themechangebtimg').src = '../Images/sun.png';
+    }
+    else if(color == 1){
+        document.getElementById('themechangebtimg').src = '../Images/sun1.png';
+    }
+    else{
+        document.getElementById('themechangebtimg').src = '../Images/sun2.png';
+    }
 
-    document.getElementById('bottominstaimg').src = '../Shresth-Sharma-4/Images/instaw.png';
-    document.getElementById('bottomgitimg').src = '../Shresth-Sharma-4/Images/gitw.png';
+    document.getElementById('bottominstaimg').src = '../Images/instaw.png';
+    document.getElementById('bottomgitimg').src = '../Images/gitw.png';
     revtheme = 'white'
 }
 else{
     theme = 'white'
-    document.getElementById('themechangebtimg').src = '../Shresth-Sharma-4/Images/moon.png'; 
- 
-    document.getElementById('bottominstaimg').src = '../Shresth-Sharma-4/Images/instab.png';
-    document.getElementById('bottomgitimg').src = '../Shresth-Sharma-4/Images/gitb.png';
+    document.getElementById('themechangebtimg').src = '../Images/moon.png'; 
+    
+    document.getElementById('bottominstaimg').src = '../Images/instab.png';
+    document.getElementById('bottomgitimg').src = '../Images/gitb.png';
     revtheme = 'black'
 }
+function setcolor(){
+    console.log(getCookie('color'))
+    if(getCookie('color') == 0){
+        color = 'blueviolet'
+        document.getElementById('name').style.color = color;
+        document.querySelector('.navbt').style.color = color;
+        document.getElementById('mygear').style.textDecorationColor = color;
+        document.getElementById('about').style.textDecorationColor = color;
+        document.getElementById('feedback').style.textDecorationColor = color;
+        document.getElementById('home').style.textDecorationColor = color;
+        document.getElementById('contact').style.textDecorationColor = color;
+        document.getElementById('between1').style.color = color;
+        document.getElementById('between3').style.color = color;
+        document.getElementById('games').style.color = color;
+        document.getElementById('equ').style.color = color;
+        document.getElementById('edit').style.color = color;
+        document.getElementById('bottomname').style.color = color;
+        document.getElementById('gamesonbt').style.backgroundColor = color;
+        document.getElementById('gamesdwbt').style.backgroundColor = color;
+        document.getElementById('solvebt').style.backgroundColor = color;
+        document.getElementById('watchbt').style.backgroundColor = color;
+        if(theme == 'black'){
+            document.getElementById('themechangebtimg').src='../Images/sun.png'
+        }
+    }
+    else if(getCookie('color') == 1){
+        color = 'rgb(255,153,51)'
+        document.getElementById('name').style.color = color;
+        document.querySelector('.navbt').style.color = color;
+        document.getElementById('mygear').style.textDecorationColor = color;
+        document.getElementById('about').style.textDecorationColor = color;
+        document.getElementById('feedback').style.textDecorationColor = color;
+        document.getElementById('home').style.textDecorationColor = color;
+        document.getElementById('contact').style.textDecorationColor = color;
+        document.getElementById('between1').style.color = color;
+        document.getElementById('between3').style.color = color;
+        document.getElementById('games').style.color = color;
+        document.getElementById('equ').style.color = color;
+        document.getElementById('edit').style.color = color;
+        document.getElementById('bottomname').style.color = color;
+        document.getElementById('gamesonbt').style.backgroundColor = color;
+        document.getElementById('gamesdwbt').style.backgroundColor = color;
+        document.getElementById('solvebt').style.backgroundColor = color;
+        document.getElementById('watchbt').style.backgroundColor = color;
+        if(theme == 'black'){
+            document.getElementById('themechangebtimg').src='../Images/sun1.png'
+        }
+    }
+    else{
+        color = 'rgb(0,153,0)'
+        document.getElementById('name').style.color = color;
+        document.querySelector('.navbt').style.color = color;
+        document.getElementById('mygear').style.textDecorationColor = color;
+        document.getElementById('about').style.textDecorationColor = color;
+        document.getElementById('feedback').style.textDecorationColor = color;
+        document.getElementById('home').style.textDecorationColor = color;
+        document.getElementById('contact').style.textDecorationColor = color;
+        document.getElementById('between1').style.color = color;
+        document.getElementById('between3').style.color = color;
+        document.getElementById('games').style.color = color;
+        document.getElementById('equ').style.color = color;
+        document.getElementById('edit').style.color = color;
+        document.getElementById('bottomname').style.color = color;
+        document.getElementById('gamesonbt').style.backgroundColor = color;
+        document.getElementById('gamesdwbt').style.backgroundColor = color;
+        document.getElementById('solvebt').style.backgroundColor = color;
+        document.getElementById('watchbt').style.backgroundColor = color;
+        if(theme == 'black'){
+            document.getElementById('themechangebtimg').src='../Images/sun2.png'
+        }
+    }
+}
+console.log(getCookie('theme'))
+// changecolor()
+setcolor();
+
 changetheme()
 function changetheme(){
     if(theme == 'black'){
         theme = 'white'
-        document.getElementById('themechangebtimg').src = '../Shresth-Sharma-4/Images/moon.png'; 
+        document.getElementById('themechangebtimg').src = '../Images/moon.png'; 
        
-        document.getElementById('bottominstaimg').src = '../Shresth-Sharma-4/Images/instaw.png';
-        document.getElementById('bottomgitimg').src = '../Shresth-Sharma-4/Images/gitw.png';
+        document.getElementById('bottominstaimg').src = '../Images/instaw.png';
+        document.getElementById('bottomgitimg').src = '../Images/gitw.png';
         revtheme = 'black'
         setCookie('theme','1',365)
     }
     else{
         theme = 'black'
-        document.getElementById('themechangebtimg').src = '../Shresth-Sharma-4/Images/sun.png';
+        if(color == 0){
+            document.getElementById('themechangebtimg').src = '../Images/sun.png';
+        }
+        else if(color == 1){
+            document.getElementById('themechangebtimg').src = '../Images/sun1.png';
+        }
+        else{
+            document.getElementById('themechangebtimg').src = '../Images/sun2.png';
+        }
         
-        document.getElementById('bottominstaimg').src = '../Shresth-Sharma-4/Images/instab.png';
-        document.getElementById('bottomgitimg').src = '../Shresth-Sharma-4/Images/gitb.png';
+        document.getElementById('bottominstaimg').src = '../Images/instab.png';
+        document.getElementById('bottomgitimg').src = '../Images/gitb.png';
         revtheme = 'white'
         setCookie('theme','0',365)
     }

@@ -1,67 +1,242 @@
+function getRandomInt(min, max) {
+  min = Math.ceil(min); // Round up to ensure it's inclusive
+  max = Math.floor(max); // Round down to ensure it's inclusive
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 function setCookie(name,value,days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days*24*60*60*1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    console.log(name + "=" + (value || "")  + expires + "; path=/")
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  var expires = "";
+  if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+  }
+  console.log(name + "=" + (value || "")  + expires + "; path=/")
+  document.cookie = name + "=" + (value || "")  + expires + "; path=/";
 }
 function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}
+function changecolor(){
+  setCookie('color', getRandomInt(0,2), 7)
+  setcolor();
+}
+if(getCookie('color') == null){
+  setCookie('color', getRandomInt(0,2), 7)
 }
 if(getCookie('theme')==null){
-    setCookie('theme', '0', 365)
+  setCookie('theme', '0', 365)
 }
-console.log(getCookie('theme'))
+color = getCookie('color')
 if(getCookie('theme')=='1'){
-    theme = 'black'
-    document.getElementById('themechangebtimg').src = '../Images/sun.png';
+  theme = 'black'
+  if(color == 0){
+      document.getElementById('themechangebtimg').src = '../Images/sun.png';
+  }
+  else if(color == 1){
+      document.getElementById('themechangebtimg').src = '../Images/sun1.png';
+  }
+  else{
+      document.getElementById('themechangebtimg').src = '../Images/sun2.png';
+  }
 
-    document.getElementById('bottominstaimg').src = '../Images/instaw.png';
-    document.getElementById('bottomgitimg').src = '../Images/gitw.png';
-    revtheme = 'white'
+  document.getElementById('bottominstaimg').src = '../Images/instaw.png';
+  document.getElementById('bottomgitimg').src = '../Images/gitw.png';
+  revtheme = 'white'
 }
 else{
-    theme = 'white'
-    document.getElementById('themechangebtimg').src = '../Images/moon.png'; 
- 
-    document.getElementById('bottominstaimg').src = '../Images/instab.png';
-    document.getElementById('bottomgitimg').src = '../Images/gitb.png';
-    revtheme = 'black'
+  theme = 'white'
+  document.getElementById('themechangebtimg').src = '../Images/moon.png'; 
+  
+  document.getElementById('bottominstaimg').src = '../Images/instab.png';
+  document.getElementById('bottomgitimg').src = '../Images/gitb.png';
+  revtheme = 'black'
 }
+function setcolor(){
+  console.log(getCookie('color'))
+  if(getCookie('color') == 0){
+      color = 'blueviolet'
+      document.getElementById('name').style.color = color;
+      document.querySelector('.navbt').style.color = color;
+      document.getElementById('mygear').style.textDecorationColor = color;
+      document.getElementById('about').style.textDecorationColor = color;
+      document.getElementById('feedback').style.textDecorationColor = color;
+      document.getElementById('home').style.textDecorationColor = color;
+      document.getElementById('contact').style.textDecorationColor = color;
+      document.getElementById('between1').style.color = color;
+      document.getElementById('between3').style.color = color;
+      document.getElementById('bottomname').style.color = color;
+      document.getElementsByClassName('bt')[0].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[1].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[2].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[3].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[4].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[5].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[6].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[7].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[8].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[9].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[10].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[11].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[12].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[13].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[14].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[15].style.backgroundColor = color;
+      document.getElementsByClassName('div')[0].style.borderColor = color;
+      document.getElementsByClassName('div')[1].style.borderColor = color;
+      document.getElementsByClassName('div')[2].style.borderColor = color;
+      document.getElementsByClassName('div')[3].style.borderColor = color;
+      document.getElementsByClassName('div')[4].style.borderColor = color;
+      document.getElementsByClassName('div')[5].style.borderColor = color;
+      document.getElementsByClassName('div')[6].style.borderColor = color;
+      document.getElementsByClassName('div')[7].style.borderColor = color;
+      document.getElementsByClassName('div')[8].style.borderColor = color;
+      document.getElementsByClassName('div')[9].style.borderColor = color;
+      document.getElementsByClassName('div')[10].style.borderColor = color;
+      document.getElementsByClassName('div')[11].style.borderColor = color;
+      document.getElementsByClassName('div')[12].style.borderColor = color;
+      document.getElementsByClassName('div')[13].style.borderColor = color;
+      document.getElementsByClassName('div')[14].style.borderColor = color;
+      document.getElementsByClassName('div')[15].style.borderColor = color;
+      if(theme == 'black'){
+          document.getElementById('themechangebtimg').src='../Images/sun.png'
+      }
+  }
+  else if(getCookie('color') == 1){
+      color = 'rgb(255,153,51)'
+      document.getElementById('name').style.color = color;
+      document.querySelector('.navbt').style.color = color;
+      document.getElementById('mygear').style.textDecorationColor = color;
+      document.getElementById('about').style.textDecorationColor = color;
+      document.getElementById('feedback').style.textDecorationColor = color;
+      document.getElementById('home').style.textDecorationColor = color;
+      document.getElementById('contact').style.textDecorationColor = color;
+      document.getElementById('between1').style.color = color;
+      document.getElementById('between3').style.color = color;
+      document.getElementById('bottomname').style.color = color;
+      document.getElementsByClassName('bt')[0].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[1].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[2].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[3].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[4].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[5].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[6].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[7].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[8].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[9].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[10].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[11].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[12].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[13].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[14].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[15].style.backgroundColor = color;
+      document.getElementsByClassName('div')[0].style.borderColor = color;
+      document.getElementsByClassName('div')[1].style.borderColor = color;
+      document.getElementsByClassName('div')[2].style.borderColor = color;
+      document.getElementsByClassName('div')[3].style.borderColor = color;
+      document.getElementsByClassName('div')[4].style.borderColor = color;
+      document.getElementsByClassName('div')[5].style.borderColor = color;
+      document.getElementsByClassName('div')[6].style.borderColor = color;
+      document.getElementsByClassName('div')[7].style.borderColor = color;
+      document.getElementsByClassName('div')[8].style.borderColor = color;
+      document.getElementsByClassName('div')[9].style.borderColor = color;
+      document.getElementsByClassName('div')[10].style.borderColor = color;
+      document.getElementsByClassName('div')[11].style.borderColor = color;
+      document.getElementsByClassName('div')[12].style.borderColor = color;
+      document.getElementsByClassName('div')[13].style.borderColor = color;
+      document.getElementsByClassName('div')[14].style.borderColor = color;
+      document.getElementsByClassName('div')[15].style.borderColor = color;
+      if(theme == 'black'){
+          document.getElementById('themechangebtimg').src='../Images/sun1.png'
+      }
+  }
+  else{
+      color = 'rgb(0,153,0)'
+      document.getElementById('name').style.color = color;
+      document.querySelector('.navbt').style.color = color;
+      document.getElementById('mygear').style.textDecorationColor = color;
+      document.getElementById('about').style.textDecorationColor = color;
+      document.getElementById('feedback').style.textDecorationColor = color;
+      document.getElementById('home').style.textDecorationColor = color;
+      document.getElementById('contact').style.textDecorationColor = color;
+      document.getElementById('between1').style.color = color;
+      document.getElementById('between3').style.color = color;
+      document.getElementById('bottomname').style.color = color;
+      document.getElementsByClassName('bt')[0].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[1].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[2].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[3].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[4].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[5].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[6].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[7].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[8].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[9].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[10].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[11].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[12].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[13].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[14].style.backgroundColor = color;
+      document.getElementsByClassName('bt')[15].style.backgroundColor = color;
+      document.getElementsByClassName('div')[0].style.borderColor = color;
+      document.getElementsByClassName('div')[1].style.borderColor = color;
+      document.getElementsByClassName('div')[2].style.borderColor = color;
+      document.getElementsByClassName('div')[3].style.borderColor = color;
+      document.getElementsByClassName('div')[4].style.borderColor = color;
+      document.getElementsByClassName('div')[5].style.borderColor = color;
+      document.getElementsByClassName('div')[6].style.borderColor = color;
+      document.getElementsByClassName('div')[7].style.borderColor = color;
+      document.getElementsByClassName('div')[8].style.borderColor = color;
+      document.getElementsByClassName('div')[9].style.borderColor = color;
+      document.getElementsByClassName('div')[10].style.borderColor = color;
+      document.getElementsByClassName('div')[11].style.borderColor = color;
+      document.getElementsByClassName('div')[12].style.borderColor = color;
+      document.getElementsByClassName('div')[13].style.borderColor = color;
+      document.getElementsByClassName('div')[14].style.borderColor = color;
+      document.getElementsByClassName('div')[15].style.borderColor = color;
+      if(theme == 'black'){
+          document.getElementById('themechangebtimg').src='../Images/sun2.png'
+      }
+  }
+}
+console.log(getCookie('theme'))
+// changecolor()
+setcolor();
+
 changetheme()
 function changetheme(){
-    if(theme == 'black'){
-        theme = 'white'
-        document.getElementById('themechangebtimg').src = '../Images/moon.png'; 
-       
-        document.getElementById('bottominstaimg').src = '../Images/instaw.png';
-
-        document.getElementById('bottomgitimg').src = '../Images/gitw.png';
-
-        revtheme = 'black'
-        setCookie('theme','1',365)
-    }
-    else{
-        theme = 'black'
-        document.getElementById('themechangebtimg').src = '../Images/sun.png';
-        
-        document.getElementById('bottominstaimg').src = '../Images/instab.png';
-
-        document.getElementById('bottomgitimg').src = '../Images/gitb.png';
-
-        revtheme = 'white'
-        setCookie('theme','0',365)
-    }
+  if(theme == 'black'){
+      theme = 'white'
+      document.getElementById('themechangebtimg').src = '../Images/moon.png'; 
+     
+      document.getElementById('bottominstaimg').src = '../Images/instaw.png';
+      document.getElementById('bottomgitimg').src = '../Images/gitw.png';
+      revtheme = 'black'
+      setCookie('theme','1',365)
+  }
+  else{
+      theme = 'black'
+      if(color == 0){
+          document.getElementById('themechangebtimg').src = '../Images/sun.png';
+      }
+      else if(color == 1){
+          document.getElementById('themechangebtimg').src = '../Images/sun1.png';
+      }
+      else{
+          document.getElementById('themechangebtimg').src = '../Images/sun2.png';
+      }
+      
+      document.getElementById('bottominstaimg').src = '../Images/instab.png';
+      document.getElementById('bottomgitimg').src = '../Images/gitb.png';
+      revtheme = 'white'
+      setCookie('theme','0',365)
+  }
     document.getElementById('nav').style.backgroundColor = theme;
     document.getElementsByTagName('body')[0].style.backgroundColor = theme;
     document.getElementById('nav').style.color = revtheme;
