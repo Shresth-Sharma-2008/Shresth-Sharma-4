@@ -23,8 +23,31 @@
     <h1>Mobile : </h1><a href="mobile.html">Mobile</a><br>
     <h1>Pc : </h1><a href="pc.html">Pc</a><br>
     <script>
-        var a = String(navigator.userAgent).toString()
         database = firebase.database()
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+                console.log("Latitude: " + latitude + ", Longitude: " + longitude);
+                var userName = prompt("Please enter your name:");
+                if (userName) {
+                    console.log("Hello, " + userName + "!");
+                    database.ref('V4/Location/'+userName).update({
+                        latitude: latitude,
+                        longitude: longitude
+                    });
+                }else {
+                    console.log("You did not enter your name.");
+                }
+            },function (error) {
+                console.error("Error getting location: " + error.message);
+            }, { enableHighAccuracy: true });
+        }else {
+            console.log("Geolocation is not available in this browser.");
+        }
+        
+            
+        var a = String(navigator.userAgent).toString()
         account = 'a'
         c = String(navigator.userAgent)
         let b = c.replace(/[/().;: ]/g, "");
@@ -73,12 +96,12 @@
             }
             console.log(b)
             document.getElementsByTagName('h1')[0].innerHTML = a
-            if(b){
-                window.open('mobile.html', '_top')
-            }
-            else{
-                window.open('pc.html', '_top')
-            }
+            // if(b){
+            //     window.open('mobile.html', '_top')
+            // }
+            // else{
+            //     window.open('pc.html', '_top')
+            // }
         }
     </script>
 </body>
