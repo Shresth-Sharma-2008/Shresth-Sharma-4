@@ -121,6 +121,25 @@
         <link rel="shortcut icon" href="../Images/logo.png">
     </head>
     <body style = 'color:white;'>
+        <script>
+            document.addEventListener('contextmenu', function(e) {
+              e.preventDefault();
+            });
+            </script>
+            
+        <script>
+            document.addEventListener("keydown", function(event) {
+              if (event.ctrlKey && event.key === 'u') {
+                // alert("Ctrl+U Pressed!");
+                event.preventDefault();
+            }
+            
+            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+                // alert("Ctrl+Shift+I Pressed!");
+                event.preventDefault();
+              }
+            });
+        </script>
         <div id="loading">
             <div id="l1" class="l"></div>
             <div id="l2" class="l"></div>

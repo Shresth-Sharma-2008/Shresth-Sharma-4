@@ -185,6 +185,7 @@ c = 'JS Programmer'
 d=0
 e = 0
 // alert(c.slice(0,12))
+setcolor();
 function text(){
     if(d<c.length && e == 0){
         d++

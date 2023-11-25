@@ -3,6 +3,7 @@
 <head>
     <title>Shresth Sharma</title>
     <style>
+        
         #content{
             display:none;
         }
@@ -122,8 +123,8 @@
             background-color: black;
         }
         #video1{
-            width:99vw;
-            max-height:99vh;
+            width:100vw;
+            max-height:91vh;
             opacity:100%;
         }
         #mainimg{
@@ -362,6 +363,25 @@
     <link rel="shortcut icon" href="Images/logo.png">
 </head>
 <body style = 'color:white;'>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+        });
+        </script>
+        
+    <script>
+        document.addEventListener("keydown", function(event) {
+          if (event.ctrlKey && event.key === 'u') {
+            // alert("Ctrl+U Pressed!");
+            event.preventDefault();
+        }
+        
+        if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+            // alert("Ctrl+Shift+I Pressed!");
+            event.preventDefault();
+          }
+        });
+    </script>
     <div id="loading">
         <div id="l1" class="l"></div>
         <div id="l2" class="l"></div>
@@ -538,6 +558,7 @@
             document.getElementById('card').style.animation = 'card 2.5s linear';
             document.getElementById('access').style.animation = 'accessg 1s linear';
             document.getElementById('granted').style.animation = 'accessg 1s linear';
+            document.body.style.overflowY = 'visible';
             // document.getElementsByClassName('hori')[0].style.animation = 'line 2s linear'
             setTimeout(blur, 2700)
             setTimeout(blur1, 3500)

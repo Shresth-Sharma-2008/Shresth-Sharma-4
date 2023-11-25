@@ -2,6 +2,13 @@
     font-family: presidium;
     src: url(../fonts/presidium.ttf);
 }
+*{
+    cursor: url('../Images/cursor.cur'), auto;
+    overflow-x: hidden;
+}
+* button:hover{
+    cursor: url('../Images/cursor1.png'), auto;
+} 
 #nav{
     position:fixed;
     left:0px;

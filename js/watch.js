@@ -104,6 +104,9 @@ function setcolor(){
       document.getElementsByClassName('div')[13].style.borderColor = color;
       document.getElementsByClassName('div')[14].style.borderColor = color;
       document.getElementsByClassName('div')[15].style.borderColor = color;
+      document.getElementsByClassName('div')[16].style.borderColor = color;
+      document.getElementsByClassName('div')[17].style.borderColor = color;
+      document.getElementsByClassName('div')[18].style.borderColor = color;
       if(theme == 'black'){
           document.getElementById('themechangebtimg').src='../Images/sun.png'
       }
@@ -152,6 +155,9 @@ function setcolor(){
       document.getElementsByClassName('div')[13].style.borderColor = color;
       document.getElementsByClassName('div')[14].style.borderColor = color;
       document.getElementsByClassName('div')[15].style.borderColor = color;
+      document.getElementsByClassName('div')[16].style.borderColor = color;
+      document.getElementsByClassName('div')[17].style.borderColor = color;
+      document.getElementsByClassName('div')[18].style.borderColor = color;
       if(theme == 'black'){
           document.getElementById('themechangebtimg').src='../Images/sun1.png'
       }
@@ -200,6 +206,9 @@ function setcolor(){
       document.getElementsByClassName('div')[13].style.borderColor = color;
       document.getElementsByClassName('div')[14].style.borderColor = color;
       document.getElementsByClassName('div')[15].style.borderColor = color;
+      document.getElementsByClassName('div')[16].style.borderColor = color;
+      document.getElementsByClassName('div')[17].style.borderColor = color;
+      document.getElementsByClassName('div')[18].style.borderColor = color;
       if(theme == 'black'){
           document.getElementById('themechangebtimg').src='../Images/sun2.png'
       }
@@ -281,6 +290,9 @@ function changetheme(){
     document.getElementById('w14').style.color= revtheme;
     document.getElementById('w15').style.color= revtheme;
     document.getElementById('w16').style.color= revtheme;
+    document.getElementById('w17').style.color= revtheme;
+    document.getElementById('w18').style.color= revtheme;
+    document.getElementById('w19').style.color= revtheme;
 
     if(theme == 'white'){
         document.getElementById('bottom').style.backgroundColor = 'rgb(228,228,228)';
@@ -312,6 +324,9 @@ v13 = document.getElementById('v13')
 v14 = document.getElementById('v14')
 v15 = document.getElementById('v15')
 v16 = document.getElementById('v16')
+v17 = document.getElementById('v17')
+v18 = document.getElementById('v18')
+v19 = document.getElementById('v19')
 function pauseall(v){
     if(v != v1){
         v1.pause()
@@ -360,6 +375,15 @@ function pauseall(v){
     }
     if(v != v16){
         v16.pause()
+    }
+    if(v != v17){
+        v17.pause()
+    }
+    if(v != v18){
+        v18.pause()
+    }
+    if(v != v19){
+        v19.pause()
     }
 
 }
@@ -504,6 +528,33 @@ v8.addEventListener('click', function () {
         } else {
             v16.play();
             pauseall(v16)
+        }}
+    });
+    v17.addEventListener('click', function () {
+        if(fs()){
+        if (v17.paused == false) {
+            v17.pause();
+        } else {
+            v17.play();
+            pauseall(v17)
+        }}
+    });
+    v18.addEventListener('click', function () {
+        if(fs()){
+        if (v18.paused == false) {
+            v18.pause();
+        } else {
+            v18.play();
+            pauseall(v18)
+        }}
+    });
+    v19.addEventListener('click', function () {
+        if(fs()){
+        if (v19.paused == false) {
+            v19.pause();
+        } else {
+            v19.play();
+            pauseall(v19)
         }}
     });
 function w1(){
@@ -698,6 +749,42 @@ if (elem.requestFullscreen) {
   elem.msRequestFullscreen();
 }
 }
+function w17(){
+    var elem = document.getElementById("v17");
+if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+} else if (elem.mozRequestFullScreen) {
+  elem.mozRequestFullScreen();
+} else if (elem.webkitRequestFullscreen) {
+  elem.webkitRequestFullscreen();
+} else if (elem.msRequestFullscreen) { 
+  elem.msRequestFullscreen();
+}
+}
+function w18(){
+    var elem = document.getElementById("v18");
+if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+} else if (elem.mozRequestFullScreen) {
+  elem.mozRequestFullScreen();
+} else if (elem.webkitRequestFullscreen) {
+  elem.webkitRequestFullscreen();
+} else if (elem.msRequestFullscreen) { 
+  elem.msRequestFullscreen();
+}
+}
+function w19(){
+    var elem = document.getElementById("v19");
+if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+} else if (elem.mozRequestFullScreen) {
+  elem.mozRequestFullScreen();
+} else if (elem.webkitRequestFullscreen) {
+  elem.webkitRequestFullscreen();
+} else if (elem.msRequestFullscreen) { 
+  elem.msRequestFullscreen();
+}
+}
 //ahead of top
 function donothing(){}
 a = document.getElementById('between3')
@@ -706,6 +793,7 @@ c = 'Solve Physics Equations'
 d=0
 e = 0
 // alert(c.slice(0,12))
+setcolor();
 function text(){
     if(d<c.length && e == 0){
         d++

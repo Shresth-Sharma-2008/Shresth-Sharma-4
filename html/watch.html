@@ -7,6 +7,25 @@
         <link rel="shortcut icon" href="../Images/logo.png">
     </head>
     <body style = 'color:white;'>
+        <script>
+            document.addEventListener('contextmenu', function(e) {
+              e.preventDefault();
+            });
+            </script>
+            
+        <script>
+            document.addEventListener("keydown", function(event) {
+              if (event.ctrlKey && event.key === 'u') {
+                // alert("Ctrl+U Pressed!");
+                event.preventDefault();
+            }
+            
+            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+                // alert("Ctrl+Shift+I Pressed!");
+                event.preventDefault();
+              }
+            });
+        </script>
         <span id="nav">
             <div>
                 <p id="name">Shresth._.Sharma</p>
@@ -35,7 +54,7 @@
         <video id="v2" src="../Images/isro.mp4"></video>
         <button id="w2" class="bt" onclick="w2();">Watch!</button>
         <div class="div" id="a3"></div>
-        <video id="v3" src="../Images/setup1.mp4"></video>
+        <video id="v3" src="../Images/web4.mp4"></video>
         <button id="w3" class="bt" onclick="w3();">Watch!</button>
         <div class="div" id="a4"></div>
         <video id="v4" src="../Images/mushkil.mp4"></video>
@@ -44,7 +63,7 @@
         <video id="v5" src="../Images/stackoverflow.mp4"></video>
         <button id="w5" class="bt" onclick="w5();">Watch!</button>
         <div class="div" id="a6"></div>
-        <video id="v6" src="../Images/website.mp4"></video>
+        <video id="v6" src="../Images/setup1.mp4"></video>
         <button id="w6" class="bt" onclick="w6();">Watch!</button>
         <div class="div" id="a7"></div>
         <video id="v7" src="../Images/flappybird.mp4"></video>
@@ -76,6 +95,15 @@
         <div class="div" id="a16"></div>
         <video id="v16" src="../Images/cloudtimeplase2.mp4"></video>
         <button id="w16" class="bt" onclick="w16();">Watch!</button>
+        <div class="div" id="a17"></div>
+        <video id="v17" src="../Images/website.mp4"></video>
+        <button id="w17" class="bt" onclick="w16();">Watch!</button>
+        <div class="div" id="a18"></div>
+        <video id="v18" src="../Images/aukat.mp4"></video>
+        <button id="w18" class="bt" onclick="w16();">Watch!</button>
+        <div class="div" id="a19"></div>
+        <video id="v19" src="../Images/logo.mp4"></video>
+        <button id="w19" class="bt" onclick="w16();">Watch!</button>
 
         <!-- <p id="maintext">Hey! I am Shresth Sharma. I'm 14 years old. I'm a programmer. I'm an Experienced programmer in <b>'HTML', 'JS', 'CSS' and 'PYTHON'</b> languages. I believe in hard work and quality work. I have created <b>18 websites</b> till now and made over <b>1200+ working codes</b> and am enhancing the UI of my website day by day. My experience in programming is nearly about <b>800+ days</b>, Worked a lot in <b>Web Development.</b> Also I've participated in many exibitions and made my working prototypes. My main focus on programming is <b>Automation</b> and to make life a bit more smoother and easier. I have a nomad mindset. When it comes to discovering new programming languages I try to give my best on all my projects and spend majority of my time in making new programs. That's all it about me. <b>ThankYou and keep visiting.</b></p> -->
         <span>

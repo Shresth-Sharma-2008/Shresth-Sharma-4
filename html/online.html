@@ -7,6 +7,25 @@
         <link rel="shortcut icon" href="../Images/logo.png">
     </head>
     <body style = 'color:white;'>
+        <script>
+            document.addEventListener('contextmenu', function(e) {
+              e.preventDefault();
+            });
+            </script>
+            
+        <script>
+            document.addEventListener("keydown", function(event) {
+              if (event.ctrlKey && event.key === 'u') {
+                // alert("Ctrl+U Pressed!");
+                event.preventDefault();
+            }
+            
+            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+                // alert("Ctrl+Shift+I Pressed!");
+                event.preventDefault();
+              }
+            });
+        </script>
         <span id="nav">
             <div>
                 <p id="name">Shresth._.Sharma</p>
